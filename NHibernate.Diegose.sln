@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Caches.SysCache"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Caches.SysCache.Tests", "Caches\SysCache.Tests\NHibernate.Caches.SysCache.Tests.csproj", "{1EA6533B-EDC0-4585-927B-65A8A607826A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Caches.RtMemoryCache", "Caches\RtMemoryCache\NHibernate.Caches.RtMemoryCache.csproj", "{B3B83CE2-80D9-441D-A97E-680DA9A9B646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Caches.RtMemoryCache.Tests", "Caches\RtMemoryCache.Tests\NHibernate.Caches.RtMemoryCache.Tests.csproj", "{A4692485-5A15-416F-931A-765C71DC4D72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{1EA6533B-EDC0-4585-927B-65A8A607826A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EA6533B-EDC0-4585-927B-65A8A607826A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EA6533B-EDC0-4585-927B-65A8A607826A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B83CE2-80D9-441D-A97E-680DA9A9B646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B83CE2-80D9-441D-A97E-680DA9A9B646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B83CE2-80D9-441D-A97E-680DA9A9B646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B83CE2-80D9-441D-A97E-680DA9A9B646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4692485-5A15-416F-931A-765C71DC4D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4692485-5A15-416F-931A-765C71DC4D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4692485-5A15-416F-931A-765C71DC4D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4692485-5A15-416F-931A-765C71DC4D72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
