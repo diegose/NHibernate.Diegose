@@ -47,6 +47,8 @@
     <Compile Include="CollectionQueryableExtensions.cs" />
     <Compile Include="PersistentQueryableBag.cs" />
     <Compile Include="PersistentQueryableBagType.cs" />
+    <Compile Include="PersistentQueryableList.cs" />
+    <Compile Include="PersistentQueryableListType.cs" />
     <Compile Include="PersistentQueryableSet.cs" />
     <Compile Include="PersistentQueryableSetType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

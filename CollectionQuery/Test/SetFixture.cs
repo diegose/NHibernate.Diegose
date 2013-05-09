@@ -13,11 +13,11 @@ namespace NHibernate.CollectionQuery.Test
 
         protected override void CustomizeMapping(ConventionModelMapper mapper)
         {
-            mapper.Class<Foo>(cm => cm.Set(x => x.Bars, bpm =>
-            {
-                bpm.Cascade(Cascade.All);
-                bpm.Type<PersistentQueryableSetType<Bar>>();
-            }));
+            mapper.Class<Foo>(cm => cm.Set(x => x.Bars, spm =>
+                                                        {
+                                                            spm.Cascade(Cascade.All);
+                                                            spm.Type<PersistentQueryableSetType<Bar>>();
+                                                        }));
         }
     }
 }
