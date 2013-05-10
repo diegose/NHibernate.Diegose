@@ -57,6 +57,7 @@
     <Compile Include="Domain\Bar.cs" />
     <Compile Include="Domain\Foo.cs" />
     <Compile Include="BagFixture.cs" />
+    <Compile Include="IdBagFixture.cs" />
     <Compile Include="ListFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryableCollectionsFixture.cs" />

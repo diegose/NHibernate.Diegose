@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollectionQueryableExtensions.cs" />
+    <Compile Include="PersistentQueryableIdBag.cs" />
+    <Compile Include="PersistentQueryableIdBagType.cs" />
     <Compile Include="PersistentQueryableBag.cs" />
     <Compile Include="PersistentQueryableBagType.cs" />
     <Compile Include="PersistentQueryableList.cs" />
