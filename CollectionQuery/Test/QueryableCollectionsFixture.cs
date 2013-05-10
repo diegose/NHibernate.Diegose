@@ -26,7 +26,9 @@ namespace NHibernate.CollectionQuery.Test
             configuration.SessionFactory()
                          .Integrate.Using<SQLiteDialect>()
                          .Connected.Using("Data source=testdb")
-                         .AutoQuoteKeywords();
+                         .AutoQuoteKeywords()
+                         .LogSqlInConsole()
+                         .EnableLogFormattedSql();
             var mapper = new ConventionModelMapper();
             mapper.Class<Foo>(cm => { });
             mapper.Class<Bar>(cm => { });
