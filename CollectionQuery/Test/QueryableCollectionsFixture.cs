@@ -136,7 +136,8 @@ namespace NHibernate.CollectionQuery.Test
             using (var session = sessionFactory.OpenSession())
             {
                 var foo = session.Get<Foo>(id);
-                var bar = foo.Bars.Query().Where(b => b.Data == 2);
+                var bar = foo.Bars.Query().SingleOrDefault(b => b.Data == 2);
+                Assert.AreEqual(2, bar.Data, "invalid element retrieved");
             }
         }
     }
