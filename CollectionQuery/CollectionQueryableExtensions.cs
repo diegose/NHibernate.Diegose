@@ -70,7 +70,16 @@ namespace NHibernate.CollectionQuery
             var itemType = types.Item2;
 
             var selectManyMethod = typeof(Queryable).GetMethods()
-                .First(x => x.Name == "SelectMany")
+                .First(m =>
+                {
+                    var parameters = m.GetParameters();
+                    if (m.Name != "SelectMany" || parameters.Length != 2) return false;
+
+                    var p1 = parameters[1].ParameterType;
+
+                    return p1.GetGenericTypeDefinition() == typeof(Expression<>)
+                        && p1.GetGenericArguments()[0].GetGenericTypeDefinition() == typeof(Func<,>);
+                })
                 .MakeGenericMethod(ownerType, itemType);
 
             var ownerQueryableParameter = Expression.Parameter(typeof(object));
