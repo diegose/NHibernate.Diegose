@@ -8,6 +8,7 @@ using NHibernate.CollectionQuery.Test.Domain;
 using NHibernate.Dialect;
 using NHibernate.Mapping.ByCode;
 using NHibernate.Tool.hbm2ddl;
+using NHibernate.Linq;
 using NUnit.Framework;
 
 namespace NHibernate.CollectionQuery.Test
@@ -138,6 +139,18 @@ namespace NHibernate.CollectionQuery.Test
                 var foo = session.Get<Foo>(id);
                 var bar = foo.Bars.Query().SingleOrDefault(b => b.Data == 2);
                 Assert.AreEqual(2, bar.Data, "invalid element retrieved");
+            }
+        }
+
+        // In order to duplicate #1 - run this test by itself.
+        [Test]
+        public void PreventSelectingWrongSelectManyQueryableMethod()
+        {
+            using (var session = sessionFactory.OpenSession())
+            {
+                var foo = session.Query<Foo>().FirstOrDefault();
+                var bar = foo.Bars.AsQueryable().Where(b => b.Data != 0).FirstOrDefault();
+                Assert.IsNotNull(bar, "no element retrieved");
             }
         }
     }
