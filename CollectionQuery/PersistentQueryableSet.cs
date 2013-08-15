@@ -20,8 +20,8 @@ namespace NHibernate.CollectionQuery
         {
         }
 
-        public PersistentQueryableSet(ISessionImplementor sessionImplementor, ICollection<T> original)
-            : base(sessionImplementor, original as Iesi.Collections.Generic.ISet<T> ?? new HashedSet<T>(original))
+        public PersistentQueryableSet(ISessionImplementor sessionImplementor, Iesi.Collections.Generic.ISet<T> original)
+            : base(sessionImplementor, original)
         {
         }
 

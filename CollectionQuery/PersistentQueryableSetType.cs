@@ -17,7 +17,14 @@ namespace NHibernate.CollectionQuery
 
         public IPersistentCollection Wrap(ISessionImplementor session, object collection)
         {
-            return new PersistentQueryableSet<T>(session, (ICollection<T>) collection);
+            var set = collection as Iesi.Collections.Generic.ISet<T>;
+            
+            if (set == null)
+            {
+                set = new HashedSet<T>((ICollection<T>)collection);
+            }
+
+            return new PersistentQueryableSet<T>(session, set);
         }
 
         public IEnumerable GetElements(object collection)
