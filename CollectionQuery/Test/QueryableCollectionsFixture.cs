@@ -129,5 +129,15 @@ namespace NHibernate.CollectionQuery.Test
                              Assert.AreEqual(0, sessionFactory.Statistics.QueryExecutionCount,
                                              "unexpected query execution"));
         }
+
+        [Test]
+        public void UsingQueryExtensionMethod()
+        {
+            using (var session = sessionFactory.OpenSession())
+            {
+                var foo = session.Get<Foo>(id);
+                var bar = foo.Bars.Query().Where(b => b.Data == 2);
+            }
+        }
     }
 }
