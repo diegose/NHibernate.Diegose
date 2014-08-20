@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.NodaTime", "Noda
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.NodaTime.Test", "NodaTime\Test\NHibernate.NodaTime.Test.csproj", "{C518CBE6-9C42-40DD-8E9F-38D6C117B850}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Caches.SysCache2", "Caches\SysCache2\NHibernate.Caches.SysCache2.csproj", "{F5852ECD-C05B-4C98-B300-702BA8D8244C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{C518CBE6-9C42-40DD-8E9F-38D6C117B850}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C518CBE6-9C42-40DD-8E9F-38D6C117B850}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C518CBE6-9C42-40DD-8E9F-38D6C117B850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5852ECD-C05B-4C98-B300-702BA8D8244C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5852ECD-C05B-4C98-B300-702BA8D8244C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5852ECD-C05B-4C98-B300-702BA8D8244C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5852ECD-C05B-4C98-B300-702BA8D8244C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
