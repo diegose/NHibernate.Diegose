@@ -21,7 +21,7 @@ namespace NHibernate.CollectionQuery
         }
 
         public PersistentQueryableSet(ISessionImplementor sessionImplementor, ICollection<T> original)
-            : base(sessionImplementor, original as Iesi.Collections.Generic.ISet<T> ?? new HashedSet<T>(original))
+            : base(sessionImplementor, original as System.Collections.Generic.ISet<T> ?? new HashSet<T>(original))
         {
         }
 
@@ -42,7 +42,7 @@ namespace NHibernate.CollectionQuery
 
         IQueryable GetQueryable()
         {
-            return queryable ?? (queryable = WasInitialized ? gset.AsQueryable() : this.Query(Session));
+            return queryable ?? (queryable = WasInitialized ? WrappedSet.AsQueryable() : this.Query(Session));
         }
     }
 }

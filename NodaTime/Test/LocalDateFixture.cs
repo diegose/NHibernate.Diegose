@@ -17,7 +17,7 @@ namespace NHibernate.NodaTime.Test
         ISessionFactory sessionFactory;
         static readonly LocalDate someDate = new LocalDate(1979, 7, 17);
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestFixtureSetUp()
         {
             var configuration = new Configuration();

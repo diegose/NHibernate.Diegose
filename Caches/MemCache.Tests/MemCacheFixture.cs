@@ -39,7 +39,7 @@ namespace NHibernate.Caches.MemCache.Tests
 		private MemCacheProvider provider;
 		private Dictionary<string, string> props;
 
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void FixtureSetup()
 		{
 			XmlConfigurator.Configure();
@@ -48,10 +48,13 @@ namespace NHibernate.Caches.MemCache.Tests
 			provider.Start(props);
 		}
 
-		[TestFixtureTearDown]
+		[OneTimeSetUp]
 		public void FixtureStop()
 		{
-			provider.Stop();
+            if (provider != null)
+            {
+                provider.Stop();
+            }
 		}
 
 		[Test]
