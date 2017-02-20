@@ -19,7 +19,7 @@ namespace NHibernate.CollectionQuery.Test
         ISessionFactory sessionFactory;
         object id;
 
-        [TestFixtureSetUp]
+        [OneTimeSetUp]
         public void TestFixtureSetUp()
         {
             configuration = new Configuration();
@@ -54,7 +54,7 @@ namespace NHibernate.CollectionQuery.Test
 
         protected abstract void CustomizeMapping(ConventionModelMapper mapper);
 
-        [TestFixtureTearDown]
+        [OneTimeTearDown]
         public void TestFixtureTearDown()
         {
             new SchemaExport(configuration).Drop(false, true);

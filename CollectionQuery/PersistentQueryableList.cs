@@ -41,7 +41,7 @@ namespace NHibernate.CollectionQuery
 
         IQueryable GetQueryable()
         {
-            return queryable ?? (queryable = WasInitialized ? glist.AsQueryable() : this.Query(Session));
+            return queryable ?? (queryable = WasInitialized ? WrappedList.AsQueryable() : this.Query(Session));
         }
     }
 }

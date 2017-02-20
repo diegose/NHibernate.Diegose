@@ -50,7 +50,7 @@ namespace NHibernate.CollectionQuery
 
         public object Instantiate(int anticipatedSize)
         {
-            return new HashedSet<T>();
+            return new HashSet<T>();
         }
     }
 }
